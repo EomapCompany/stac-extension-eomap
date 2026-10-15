@@ -53,3 +53,12 @@ def test_known_spellings_resolve(spelling, sensor):
     ]
 
     assert matches == [sensor]
+
+
+@pytest.mark.parametrize("name", VOCABULARIES)
+def test_aliases_are_not_redundant(name):
+    for entry_id, entry in load(f"vocabulary/{name}.json").items():
+        names = [normalize(entry_id), normalize(entry["title"])]
+        for alias in entry.get("aliases", []):
+            assert normalize(alias) not in names, f"{entry_id}: alias {alias!r} matches without being listed"
+            names.append(normalize(alias))

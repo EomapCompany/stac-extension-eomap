@@ -98,5 +98,5 @@ may still change fields). Vocabulary entries can be added in any release.
 uv run pytest    # schema, examples and vocabulary checks
 ```
 
-A published release is deployed to `https://eomapcompany.github.io/stac-extension-eomap/v<version>/`
+A published release (tag `v<version>`, matching the schema `$id`; published versions are never overwritten) is deployed to `https://eomapcompany.github.io/stac-extension-eomap/v<version>/`
 (`schema.json` and `vocabulary/*.json`).

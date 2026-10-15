@@ -4,11 +4,12 @@ import re
 import pytest
 import stac_pydantic
 from conftest import ROOT, load
-from jsonschema import Draft7Validator
+from jsonschema import Draft7Validator, FormatChecker
 
 
 def errors(schema: dict, document: dict) -> list[str]:
-    return [error.message for error in Draft7Validator(schema).iter_errors(document)]
+    validator = Draft7Validator(schema, format_checker=FormatChecker())
+    return [error.message for error in validator.iter_errors(document)]
 
 
 def test_schema_is_valid_draft7(schema):
@@ -43,6 +44,10 @@ def with_property(**fields) -> dict:
         {"eomap:source": "ftp"},
         {"eomap:horizontal_accuracy": -1},
         {"eomap:tide_stations": [{"number": "2491"}]},
+        {"eomap:access": ["user#bob\n"]},
+        {"eomap:access": ["role#x:y z"]},
+        {"eomap:products": ["SDB-"]},
+        {"eomap:country_code": "JAM\n"},
     ],
     ids=lambda fields: next(iter(fields)),
 )
@@ -72,3 +77,46 @@ def test_version_is_consistent():
     assert re.search(r"^## \[v(\d+\.\d+\.\d+)\]", changelog, re.M)[1] == version
     for example in ["examples/item.json", "examples/collection.json"]:
         assert schema_id in load(example)["stac_extensions"]
+
+
+def with_collection(**fields) -> dict:
+    collection = copy.deepcopy(load("examples/collection.json"))
+    collection.update(fields)
+    return collection
+
+
+@pytest.mark.parametrize(
+    "fields",
+    [
+        {"eomap:project_date": "2026-13-45"},
+        {"eomap:unknown": 1},
+        {"eomap:access": ["nobody"]},
+        {"summaries": {"eomap:products": ["sdb"]}},
+        {"summaries": {"eomap:typo": ["x"]}},
+    ],
+    ids=lambda fields: next(iter(fields)),
+)
+def test_invalid_collection_fields_are_rejected(schema, fields):
+    assert errors(schema, with_collection(**fields))
+
+
+def test_eomap_fields_belong_into_item_properties(schema):
+    item = copy.deepcopy(load("examples/item.json"))
+    item["eomap:products"] = ["SDB"]
+
+    assert errors(schema, item)
+
+
+def test_any_eomap_field_satisfies_the_extension(schema):
+    item = copy.deepcopy(load("examples/item.json"))
+    item["properties"] = {"datetime": item["properties"]["datetime"]}  # eomap fields only on assets
+
+    assert errors(schema, item) == []
+
+
+def test_declaring_the_extension_without_any_field_is_invalid(schema):
+    item = copy.deepcopy(load("examples/item.json"))
+    item["properties"] = {"datetime": item["properties"]["datetime"]}
+    item["assets"] = {"data": {"href": "https://example.org/x.tif"}}
+
+    assert errors(schema, item)

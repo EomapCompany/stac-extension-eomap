@@ -7,10 +7,7 @@
     "title": "CHIME",
     "type": "optical",
     "constellation": "chime",
-    "platform": "chime",
-    "aliases": [
-      "Chime"
-    ]
+    "platform": "chime"
   },
   "drone": {
     "title": "Drone",
@@ -24,7 +21,6 @@
       "hsi"
     ],
     "aliases": [
-      "ENMAP",
       "EnmapNorm"
     ]
   },
@@ -34,9 +30,7 @@
     "constellation": "geoeye",
     "platform": "geoeye-1",
     "aliases": [
-      "GEOEYE1",
-      "GEYE1",
-      "GeoEye1"
+      "GEYE1"
     ]
   },
   "hsx": {
@@ -46,9 +40,7 @@
       "hyspex"
     ],
     "aliases": [
-      "HYSPEX",
-      "HYSPX",
-      "hyspex"
+      "HYSPX"
     ]
   },
   "ikon": {
@@ -62,9 +54,6 @@
     "platform": "icesat-2",
     "instruments": [
       "atlas"
-    ],
-    "aliases": [
-      "IceSat-2"
     ]
   },
   "ls5": {
@@ -76,9 +65,7 @@
       "tm"
     ],
     "aliases": [
-      "LANDSAT5",
-      "LSAT5",
-      "landsat5"
+      "LSAT5"
     ]
   },
   "ls7": {
@@ -90,9 +77,7 @@
       "etm+"
     ],
     "aliases": [
-      "LANDSAT7",
-      "LSAT7",
-      "landsat7"
+      "LSAT7"
     ]
   },
   "ls8": {
@@ -104,9 +89,7 @@
       "oli"
     ],
     "aliases": [
-      "LANDSAT8",
-      "LSAT8",
-      "landsat8"
+      "LSAT8"
     ]
   },
   "ls9": {
@@ -118,9 +101,7 @@
       "oli-2"
     ],
     "aliases": [
-      "LANDSAT9",
-      "LSAT9",
-      "landsat9"
+      "LSAT9"
     ]
   },
   "mod": {
@@ -162,9 +143,7 @@
     "type": "optical",
     "constellation": "pleiades",
     "aliases": [
-      "PLEIA",
-      "PLEIADES",
-      "pleiades"
+      "PLEIA"
     ]
   },
   "pln": {
@@ -172,9 +151,7 @@
     "type": "optical",
     "constellation": "pleiades-neo",
     "aliases": [
-      "PLEIADESNEO",
-      "PLNEO",
-      "pleiades_neo"
+      "PLNEO"
     ]
   },
   "prs": {
@@ -182,9 +159,7 @@
     "type": "optical",
     "platform": "prisma",
     "aliases": [
-      "PRISMA",
-      "PRSMA",
-      "prisma"
+      "PRSMA"
     ]
   },
   "psc": {
@@ -192,7 +167,6 @@
     "type": "optical",
     "constellation": "planetscope",
     "aliases": [
-      "PLANETSCOPE",
       "PLNTS",
       "planet"
     ]
@@ -205,7 +179,6 @@
     "aliases": [
       "QBIRD",
       "QUICKBIRD",
-      "QuickBird",
       "qb_6700"
     ]
   },
@@ -230,9 +203,7 @@
       "superdove"
     ],
     "aliases": [
-      "SUDVC",
-      "SuperdoveCut",
-      "superdove_cut"
+      "SUDVC"
     ]
   },
   "sdo": {
@@ -243,8 +214,7 @@
       "superdove"
     ],
     "aliases": [
-      "SUDOV",
-      "superdove"
+      "SUDOV"
     ]
   },
   "sky": {
@@ -252,9 +222,7 @@
     "type": "optical",
     "constellation": "skysat",
     "aliases": [
-      "SKYSAT",
-      "SKYST",
-      "skysat"
+      "SKYST"
     ]
   },
   "sms": {
@@ -262,9 +230,7 @@
     "type": "optical",
     "constellation": "satellogic",
     "aliases": [
-      "SATELLOGICMS",
-      "SATMS",
-      "satellogic_ms"
+      "SATMS"
     ]
   },
   "sn1": {
@@ -275,9 +241,7 @@
       "c-sar"
     ],
     "aliases": [
-      "SENT1",
-      "SENTINEL1",
-      "sentinel1"
+      "SENT1"
     ]
   },
   "sn2": {
@@ -288,9 +252,7 @@
       "msi"
     ],
     "aliases": [
-      "SENT2",
-      "SENTINEL2",
-      "sentinel2"
+      "SENT2"
     ]
   },
   "sn3": {
@@ -301,9 +263,7 @@
       "olci"
     ],
     "aliases": [
-      "SENT3",
-      "SENTINEL3",
-      "sentinel3"
+      "SENT3"
     ]
   },
   "sp6": {
@@ -323,9 +283,7 @@
     "type": "optical",
     "constellation": "tanager",
     "aliases": [
-      "TANAGER",
-      "TANGR",
-      "tanager"
+      "TANGR"
     ]
   },
   "tris": {
@@ -337,9 +295,6 @@
     "title": "VIIRS",
     "type": "optical",
     "instruments": [
-      "viirs"
-    ],
-    "aliases": [
       "viirs"
     ]
   },
@@ -355,9 +310,7 @@
     "constellation": "worldview",
     "platform": "worldview-2",
     "aliases": [
-      "WORLDVIEW2",
-      "WVIE2",
-      "WorldView2"
+      "WVIE2"
     ]
   },
   "wv3": {
@@ -366,9 +319,7 @@
     "constellation": "worldview",
     "platform": "worldview-3",
     "aliases": [
-      "WORLDVIEW3",
-      "WVIE3",
-      "WorldView3"
+      "WVIE3"
     ]
   },
   "wv4": {
@@ -382,10 +333,7 @@
     "type": "optical",
     "constellation": "worldview-legion",
     "aliases": [
-      "WORLDVIEWLEGION",
-      "WVIEL",
-      "WorldView-Legion",
-      "WorldViewLegion"
+      "WVIEL"
     ]
   }
 }

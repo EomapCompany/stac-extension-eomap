@@ -10,13 +10,30 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      TAG: ${{ github.event.release.tag_name }}
+      BASE_URL: https://eomapcompany.github.io/stac-extension-eomap
     steps:
       - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.12.3"
+      - run: uv sync --frozen
+      - run: uv run pytest
+      - name: Tag must match the schema version
+        run: |
+          expected="$BASE_URL/$TAG/schema.json"
+          actual=$(jq -r '."$id"' json-schema/schema.json)
+          [ "$actual" = "$expected" ] || { echo "Tag $TAG does not match \$id $actual"; exit 1; }
+      - name: Published versions are immutable
+        run: |
+          if curl -sfI "$BASE_URL/$TAG/schema.json" > /dev/null; then
+            echo "$TAG is already published"; exit 1
+          fi
       - name: Collect files for the release
         run: |
-          mkdir -p public
-          cp json-schema/schema.json public/
           mkdir -p public/vocabulary
+          cp json-schema/schema.json public/
           cp vocabulary/*.json public/vocabulary/
       - uses: peaceiris/actions-gh-pages@v4
         with:
