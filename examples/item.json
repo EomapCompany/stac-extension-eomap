@@ -10,43 +10,108 @@
   "collection": "delivery-202601011200-acme-jam-bay",
   "geometry": {
     "type": "Polygon",
-    "coordinates": [[[-77.087, 18.412], [-77.019, 18.412], [-77.019, 18.429], [-77.087, 18.429], [-77.087, 18.412]]]
+    "coordinates": [
+      [
+        [
+          -77.087,
+          18.412
+        ],
+        [
+          -77.019,
+          18.412
+        ],
+        [
+          -77.019,
+          18.429
+        ],
+        [
+          -77.087,
+          18.429
+        ],
+        [
+          -77.087,
+          18.412
+        ]
+      ]
+    ]
   },
-  "bbox": [-77.087, 18.412, -77.019, 18.429],
+  "bbox": [
+    -77.087,
+    18.412,
+    -77.019,
+    18.429
+  ],
   "properties": {
     "datetime": "2026-02-17T15:45:19Z",
     "gsd": 3,
     "constellation": "worldview",
     "platform": "worldview-3",
-    "eomap:products": ["SDB", "VUC"],
-    "eomap:sensors": ["wv3"],
+    "eomap:products": [
+      "SDB",
+      "VUC"
+    ],
+    "eomap:sensors": [
+      "wv3"
+    ],
     "eomap:country_code": "JAM",
-    "eomap:corrections": ["noise", "atm", "adj", "tur"],
+    "eomap:corrections": [
+      "noise",
+      "atm",
+      "adj",
+      "tur"
+    ],
     "eomap:horizontal_accuracy": 4.5,
     "eomap:source": "sdbdeliveryapp",
-    "eomap:access": ["role#eoarchive:acme"]
+    "eomap:access": [
+      "role#eoarchive:acme"
+    ]
   },
   "assets": {
     "sdb": {
       "href": "s3://example-bucket/deliveries/acme/SDB_JAM_Bay_EOMAP_20260217T154519_3m_MSL_geotiff.tif",
       "type": "image/tiff; application=geotiff",
-      "roles": ["data"],
+      "roles": [
+        "data"
+      ],
       "title": "Satellite-derived bathymetry (SDB)",
       "proj:code": "EPSG:32618",
-      "raster:bands": [{ "data_type": "float32", "nodata": -9999, "unit": "m" }],
       "eomap:product": "SDB",
       "eomap:vertical_datum": "MSL",
-      "eomap:tide_stations": [{ "name": "Example Harbour", "number": "0001", "hat": 0.6, "msl": 0.21, "lat": -0.2, "satrec": 0.3 }],
-      "eomap:uuid": "00000000-0000-1000-8000-000000000000"
+      "eomap:tide_stations": [
+        {
+          "name": "Example Harbour",
+          "number": "0001",
+          "hat": 0.6,
+          "msl": 0.21,
+          "lat": -0.2,
+          "satrec": 0.3
+        }
+      ],
+      "eomap:uuid": "00000000-0000-1000-8000-000000000000",
+      "bands": [
+        {
+          "data_type": "float32",
+          "nodata": -9999,
+          "unit": "m"
+        }
+      ]
     },
     "vuc": {
       "href": "s3://example-bucket/deliveries/acme/VUC_JAM_Bay_EOMAP_20260217T154519_3m_geotiff.tif",
       "type": "image/tiff; application=geotiff",
-      "roles": ["data"],
+      "roles": [
+        "data"
+      ],
       "title": "Vertical uncertainty (VUC)",
       "proj:code": "EPSG:32618",
-      "raster:bands": [{ "data_type": "float32", "nodata": -9999, "unit": "m" }],
-      "eomap:product": "VUC"
+      "eomap:product": "VUC",
+      "bands": [
+        {
+          "data_type": "float32",
+          "nodata": -9999,
+          "unit": "m"
+        }
+      ]
     }
   },
   "links": []

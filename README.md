@@ -13,7 +13,7 @@ It is used together with the standard extensions, which describe everything they
 | Information | Use |
 |---|---|
 | CRS of a file | [projection](https://github.com/stac-extensions/projection) `proj:code` |
-| Data type, nodata, unit, scale of bands | [raster](https://github.com/stac-extensions/raster) `raster:bands` |
+| Data type, nodata, unit, scale of bands | STAC 1.1 `bands` (`data_type`, `nodata`, `unit`) with [raster](https://github.com/stac-extensions/raster) v2 fields such as `raster:scale` |
 | Software and versions, lineage | [processing](https://github.com/stac-extensions/processing) `processing:software`, `processing:lineage` |
 | File size, checksum | [file](https://github.com/stac-extensions/file) |
 | Classes of classified products | [classification](https://github.com/stac-extensions/classification) |
