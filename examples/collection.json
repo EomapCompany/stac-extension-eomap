@@ -1,0 +1,18 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": ["https://eomapcompany.github.io/stac-extension-eomap/v0.1.0/schema.json"],
+  "id": "delivery-202601011200-acme-jam-bay",
+  "title": "20260101.1200_Acme_JAM_Bay",
+  "description": "EOMAP delivery project 20260101.1200_Acme_JAM_Bay. Products: Satellite-derived bathymetry (SDB), Vertical uncertainty (VUC). Countries: JAM.",
+  "license": "proprietary",
+  "extent": {
+    "spatial": { "bbox": [[-77.087, 18.412, -77.019, 18.429]] },
+    "temporal": { "interval": [["2026-02-17T15:45:19Z", "2026-02-17T15:45:19Z"]] }
+  },
+  "summaries": { "eomap:products": ["SDB", "VUC"], "eomap:sensors": ["wv3"] },
+  "eomap:source": "sdbdeliveryapp",
+  "eomap:project_date": "2026-03-01",
+  "eomap:access": ["role#eoarchive:acme"],
+  "links": []
+}

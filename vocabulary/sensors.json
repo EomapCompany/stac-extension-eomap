@@ -1,0 +1,391 @@
+{
+  "aw3d": {
+    "title": "AW3D30",
+    "type": "dataset"
+  },
+  "chm": {
+    "title": "CHIME",
+    "type": "optical",
+    "constellation": "chime",
+    "platform": "chime",
+    "aliases": [
+      "Chime"
+    ]
+  },
+  "drone": {
+    "title": "Drone",
+    "type": "uav"
+  },
+  "enm": {
+    "title": "EnMAP",
+    "type": "optical",
+    "platform": "enmap",
+    "instruments": [
+      "hsi"
+    ],
+    "aliases": [
+      "ENMAP",
+      "EnmapNorm"
+    ]
+  },
+  "ge1": {
+    "title": "GeoEye-1",
+    "type": "optical",
+    "constellation": "geoeye",
+    "platform": "geoeye-1",
+    "aliases": [
+      "GEOEYE1",
+      "GEYE1",
+      "GeoEye1"
+    ]
+  },
+  "hsx": {
+    "title": "HySpex",
+    "type": "optical",
+    "instruments": [
+      "hyspex"
+    ],
+    "aliases": [
+      "HYSPEX",
+      "HYSPX",
+      "hyspex"
+    ]
+  },
+  "ikon": {
+    "title": "Ikonos",
+    "type": "optical",
+    "platform": "ikonos"
+  },
+  "is2": {
+    "title": "ICESat-2",
+    "type": "lidar",
+    "platform": "icesat-2",
+    "instruments": [
+      "atlas"
+    ],
+    "aliases": [
+      "IceSat-2"
+    ]
+  },
+  "ls5": {
+    "title": "Landsat 5",
+    "type": "optical",
+    "constellation": "landsat",
+    "platform": "landsat-5",
+    "instruments": [
+      "tm"
+    ],
+    "aliases": [
+      "LANDSAT5",
+      "LSAT5",
+      "landsat5"
+    ]
+  },
+  "ls7": {
+    "title": "Landsat 7",
+    "type": "optical",
+    "constellation": "landsat",
+    "platform": "landsat-7",
+    "instruments": [
+      "etm+"
+    ],
+    "aliases": [
+      "LANDSAT7",
+      "LSAT7",
+      "landsat7"
+    ]
+  },
+  "ls8": {
+    "title": "Landsat 8",
+    "type": "optical",
+    "constellation": "landsat",
+    "platform": "landsat-8",
+    "instruments": [
+      "oli"
+    ],
+    "aliases": [
+      "LANDSAT8",
+      "LSAT8",
+      "landsat8"
+    ]
+  },
+  "ls9": {
+    "title": "Landsat 9",
+    "type": "optical",
+    "constellation": "landsat",
+    "platform": "landsat-9",
+    "instruments": [
+      "oli-2"
+    ],
+    "aliases": [
+      "LANDSAT9",
+      "LSAT9",
+      "landsat9"
+    ]
+  },
+  "mod": {
+    "title": "Modis Terra",
+    "type": "optical",
+    "platform": "terra",
+    "instruments": [
+      "modis"
+    ],
+    "aliases": [
+      "MODTE"
+    ]
+  },
+  "model": {
+    "title": "Model",
+    "type": "model"
+  },
+  "multi": {
+    "title": "Multiple sensors",
+    "type": "multi",
+    "aliases": [
+      "MultiSource",
+      "Multisensor"
+    ]
+  },
+  "myd": {
+    "title": "Modis Aqua",
+    "type": "optical",
+    "platform": "aqua",
+    "instruments": [
+      "modis"
+    ],
+    "aliases": [
+      "MODAQ"
+    ]
+  },
+  "ple": {
+    "title": "Pleiades",
+    "type": "optical",
+    "constellation": "pleiades",
+    "aliases": [
+      "PLEIA",
+      "PLEIADES",
+      "pleiades"
+    ]
+  },
+  "pln": {
+    "title": "Pleiades Neo",
+    "type": "optical",
+    "constellation": "pleiades-neo",
+    "aliases": [
+      "PLEIADESNEO",
+      "PLNEO",
+      "pleiades_neo"
+    ]
+  },
+  "prs": {
+    "title": "Prisma",
+    "type": "optical",
+    "platform": "prisma",
+    "aliases": [
+      "PRISMA",
+      "PRSMA",
+      "prisma"
+    ]
+  },
+  "psc": {
+    "title": "Planetscope",
+    "type": "optical",
+    "constellation": "planetscope",
+    "aliases": [
+      "PLANETSCOPE",
+      "PLNTS",
+      "planet"
+    ]
+  },
+  "qb2": {
+    "title": "QuickBird 2",
+    "type": "optical",
+    "constellation": "quickbird",
+    "platform": "quickbird-2",
+    "aliases": [
+      "QBIRD",
+      "QUICKBIRD",
+      "QuickBird",
+      "qb_6700"
+    ]
+  },
+  "s3c": {
+    "title": "Sentinel-3 combined",
+    "type": "optical",
+    "constellation": "sentinel-3",
+    "instruments": [
+      "olci",
+      "slstr"
+    ],
+    "aliases": [
+      "S3COM",
+      "sentinel3_comb"
+    ]
+  },
+  "sdc": {
+    "title": "Superdove Cut",
+    "type": "optical",
+    "constellation": "planetscope",
+    "instruments": [
+      "superdove"
+    ],
+    "aliases": [
+      "SUDVC",
+      "SuperdoveCut",
+      "superdove_cut"
+    ]
+  },
+  "sdo": {
+    "title": "Superdove",
+    "type": "optical",
+    "constellation": "planetscope",
+    "instruments": [
+      "superdove"
+    ],
+    "aliases": [
+      "SUDOV",
+      "superdove"
+    ]
+  },
+  "sky": {
+    "title": "SkySat",
+    "type": "optical",
+    "constellation": "skysat",
+    "aliases": [
+      "SKYSAT",
+      "SKYST",
+      "skysat"
+    ]
+  },
+  "sms": {
+    "title": "Satellogic MS",
+    "type": "optical",
+    "constellation": "satellogic",
+    "aliases": [
+      "SATELLOGICMS",
+      "SATMS",
+      "satellogic_ms"
+    ]
+  },
+  "sn1": {
+    "title": "Sentinel-1",
+    "type": "radar",
+    "constellation": "sentinel-1",
+    "instruments": [
+      "c-sar"
+    ],
+    "aliases": [
+      "SENT1",
+      "SENTINEL1",
+      "sentinel1"
+    ]
+  },
+  "sn2": {
+    "title": "Sentinel-2",
+    "type": "optical",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "aliases": [
+      "SENT2",
+      "SENTINEL2",
+      "sentinel2"
+    ]
+  },
+  "sn3": {
+    "title": "Sentinel-3",
+    "type": "optical",
+    "constellation": "sentinel-3",
+    "instruments": [
+      "olci"
+    ],
+    "aliases": [
+      "SENT3",
+      "SENTINEL3",
+      "sentinel3"
+    ]
+  },
+  "sp6": {
+    "title": "SPOT-6",
+    "type": "optical",
+    "constellation": "spot",
+    "platform": "spot-6"
+  },
+  "sp7": {
+    "title": "SPOT-7",
+    "type": "optical",
+    "constellation": "spot",
+    "platform": "spot-7"
+  },
+  "tng": {
+    "title": "Tanager",
+    "type": "optical",
+    "constellation": "tanager",
+    "aliases": [
+      "TANAGER",
+      "TANGR",
+      "tanager"
+    ]
+  },
+  "tris": {
+    "title": "TripleSat",
+    "type": "optical",
+    "constellation": "triplesat"
+  },
+  "vrs": {
+    "title": "VIIRS",
+    "type": "optical",
+    "instruments": [
+      "viirs"
+    ],
+    "aliases": [
+      "viirs"
+    ]
+  },
+  "wv1": {
+    "title": "WorldView-1",
+    "type": "optical",
+    "constellation": "worldview",
+    "platform": "worldview-1"
+  },
+  "wv2": {
+    "title": "WorldView-2",
+    "type": "optical",
+    "constellation": "worldview",
+    "platform": "worldview-2",
+    "aliases": [
+      "WORLDVIEW2",
+      "WVIE2",
+      "WorldView2"
+    ]
+  },
+  "wv3": {
+    "title": "WorldView-3",
+    "type": "optical",
+    "constellation": "worldview",
+    "platform": "worldview-3",
+    "aliases": [
+      "WORLDVIEW3",
+      "WVIE3",
+      "WorldView3"
+    ]
+  },
+  "wv4": {
+    "title": "WorldView-4",
+    "type": "optical",
+    "constellation": "worldview",
+    "platform": "worldview-4"
+  },
+  "wvl": {
+    "title": "WorldView Legion",
+    "type": "optical",
+    "constellation": "worldview-legion",
+    "aliases": [
+      "WORLDVIEWLEGION",
+      "WVIEL",
+      "WorldView-Legion",
+      "WorldViewLegion"
+    ]
+  }
+}

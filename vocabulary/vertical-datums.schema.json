@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EOMAP vertical datums",
+  "description": "Vertical datum code \u2192 definition.",
+  "type": "object",
+  "propertyNames": {
+    "pattern": "^[A-Z0-9]+$"
+  },
+  "additionalProperties": {
+    "type": "object",
+    "required": [
+      "title"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1
+      },
+      "aliases": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

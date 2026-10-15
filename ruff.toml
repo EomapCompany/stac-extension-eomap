@@ -1,0 +1,13 @@
+line-length = 120
+target-version = "py314"
+
+[lint]
+select = ["E", "W", "F", "I", "C", "B", "N"]
+ignore = ["B008", "B904", "N805"]
+
+[lint.isort]
+no-lines-before = ["local-folder"]
+
+[format]
+quote-style = "double"
+indent-style = "space"

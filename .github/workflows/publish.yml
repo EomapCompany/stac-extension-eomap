@@ -1,0 +1,26 @@
+name: Publish schema and vocabularies
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Collect files for the release
+        run: |
+          mkdir -p public
+          cp json-schema/schema.json public/
+          mkdir -p public/vocabulary
+          cp vocabulary/*.json public/vocabulary/
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          destination_dir: ${{ github.event.release.tag_name }}
+          keep_files: true

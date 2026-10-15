@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EOMAP products",
+  "description": "Product code \u2192 definition. Codes are uppercase; aliases are other spellings of the code.",
+  "type": "object",
+  "propertyNames": {
+    "pattern": "^[A-Z0-9][A-Z0-9-]*$"
+  },
+  "additionalProperties": {
+    "type": "object",
+    "required": [
+      "title",
+      "family",
+      "unit"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": {
+        "type": "string"
+      },
+      "family": {
+        "enum": [
+          "bathymetry",
+          "topography",
+          "seafloor",
+          "reflectance",
+          "imagery",
+          "water-quality",
+          "land",
+          "shoreline",
+          "snow",
+          "atmosphere",
+          "quality",
+          "other"
+        ]
+      },
+      "unit": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "Unit of the values; null for unitless or classified data"
+      },
+      "classified": {
+        "type": "boolean"
+      },
+      "aliases": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}
