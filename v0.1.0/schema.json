@@ -1,0 +1,363 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://eomapcompany.github.io/stac-extension-eomap/v0.1.0/schema.json",
+  "title": "EOMAP Extension",
+  "description": "STAC EOMAP Extension for STAC Items and STAC Collections.",
+  "type": "object",
+  "required": [
+    "stac_extensions"
+  ],
+  "properties": {
+    "stac_extensions": {
+      "type": "array",
+      "contains": {
+        "const": "https://eomapcompany.github.io/stac-extension-eomap/v0.1.0/schema.json"
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "$comment": "This is the schema for STAC Items.",
+      "type": "object",
+      "required": [
+        "type",
+        "properties",
+        "assets"
+      ],
+      "properties": {
+        "type": {
+          "const": "Feature"
+        },
+        "properties": {
+          "$ref": "#/definitions/fields"
+        },
+        "assets": {
+          "$ref": "#/definitions/assets"
+        }
+      },
+      "allOf": [
+        {
+          "$comment": "eomap fields belong into properties or assets",
+          "propertyNames": {
+            "not": {
+              "pattern": "^eomap:"
+            }
+          }
+        },
+        {
+          "$ref": "#/definitions/require_any_field"
+        }
+      ]
+    },
+    {
+      "$comment": "This is the schema for STAC Collections.",
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "const": "Collection"
+        },
+        "assets": {
+          "$ref": "#/definitions/assets"
+        },
+        "item_assets": {
+          "$ref": "#/definitions/assets"
+        },
+        "summaries": {
+          "$ref": "#/definitions/summaries"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/definitions/fields"
+        }
+      ]
+    }
+  ],
+  "definitions": {
+    "require_any_field": {
+      "$comment": "Items must carry at least one field of this extension, in their properties or in an asset.",
+      "anyOf": [
+        {
+          "required": [
+            "properties"
+          ],
+          "properties": {
+            "properties": {
+              "not": {
+                "propertyNames": {
+                  "not": {
+                    "pattern": "^eomap:"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "required": [
+            "assets"
+          ],
+          "properties": {
+            "assets": {
+              "not": {
+                "additionalProperties": {
+                  "not": {
+                    "not": {
+                      "propertyNames": {
+                        "not": {
+                          "pattern": "^eomap:"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "assets": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/fields"
+      }
+    },
+    "product_code": {
+      "type": "string",
+      "pattern": "^(?![\\s\\S]*\\s)[A-Z0-9]+(-[A-Z0-9]+)*$"
+    },
+    "fields": {
+      "$comment": "Fields of this extension; any other `eomap:` field is invalid.",
+      "type": "object",
+      "properties": {
+        "eomap:products": {
+          "title": "Products",
+          "description": "Codes of the EOMAP products contained, see vocabulary/products.json",
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/definitions/product_code"
+          }
+        },
+        "eomap:product": {
+          "title": "Product",
+          "description": "Code of the EOMAP product an asset belongs to",
+          "$ref": "#/definitions/product_code"
+        },
+        "eomap:sensors": {
+          "title": "Sensors",
+          "description": "Ids of the sensors the data is derived from, see vocabulary/sensors.json",
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "eomap:country_code": {
+          "title": "Country code",
+          "description": "ISO 3166-1 alpha-3 country code, or an EOMAP region code (GLO, INT)",
+          "type": "string",
+          "pattern": "^(?![\\s\\S]*\\s)[A-Z]{3}$"
+        },
+        "eomap:vertical_datum": {
+          "title": "Vertical datum",
+          "description": "Vertical reference of heights and depths, see vocabulary/vertical-datums.json",
+          "type": "string",
+          "minLength": 1
+        },
+        "eomap:tide_stations": {
+          "title": "Tide stations",
+          "description": "Tide stations used for the vertical datum; levels in metres above chart datum",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "number": {
+                "type": "string"
+              },
+              "hat": {
+                "type": "number"
+              },
+              "msl": {
+                "type": "number"
+              },
+              "lat": {
+                "type": "number"
+              },
+              "satrec": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "eomap:horizontal_accuracy": {
+          "title": "Horizontal accuracy",
+          "description": "Horizontal accuracy in metres (CE90)",
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "eomap:vertical_accuracy": {
+          "title": "Vertical accuracy",
+          "description": "Vertical accuracy in metres; omitted where a vertical uncertainty (VUC) product describes it per pixel",
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "eomap:corrections": {
+          "title": "Corrections",
+          "description": "Correction modules applied in processing",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "noise",
+              "atm",
+              "adj",
+              "tur",
+              "refr",
+              "gcps",
+              "insitu"
+            ]
+          }
+        },
+        "eomap:uuid": {
+          "title": "EOMAP UUID",
+          "description": "Identifier written into the file (GeoTIFF tag EOMAP_UUID, ISO metadata fileIdentifier)",
+          "type": "string",
+          "minLength": 1
+        },
+        "eomap:source": {
+          "title": "Source",
+          "description": "System the record was created from",
+          "enum": [
+            "eoarchive",
+            "sdbdeliveryapp",
+            "rastless"
+          ]
+        },
+        "eomap:project_date": {
+          "title": "Project date",
+          "description": "Delivery date of the project",
+          "type": "string",
+          "format": "date"
+        },
+        "eomap:access": {
+          "title": "Access tags",
+          "description": "Internal: who may see the record. Removed from responses for customers.",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^(?![\\s\\S]*\\s)(role#public|role#[^:#]+:[^#]+|user#[^#]+)$"
+          }
+        },
+        "eomap:qa_flags": {
+          "title": "QA flags",
+          "description": "Issues found while creating the record, for review",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "patternProperties": {
+        "^(?!eomap:)": {}
+      },
+      "additionalProperties": false
+    },
+    "summaries": {
+      "$comment": "Summaries of eomap fields: lists of their values, or a JSON Schema / range object.",
+      "type": "object",
+      "properties": {
+        "eomap:products": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/product_code"
+              }
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "eomap:sensors": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "eomap:country_code": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/fields/properties/eomap:country_code"
+              }
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "eomap:vertical_datum": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "eomap:source": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/fields/properties/eomap:source"
+              }
+            },
+            {
+              "type": "object"
+            }
+          ]
+        }
+      },
+      "patternProperties": {
+        "^(?!eomap:)": {}
+      },
+      "additionalProperties": false
+    }
+  }
+}

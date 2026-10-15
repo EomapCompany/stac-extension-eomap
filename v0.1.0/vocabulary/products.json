@@ -1,0 +1,416 @@
+{
+  "ABS": {
+    "title": "Total Absorption",
+    "family": "water-quality",
+    "unit": "1/m",
+    "description": "Total absorption is retrieved from the absorption of light by particulate and dissolved organic and inorganic matter at a specific reference wavelength, defined at 440nm."
+  },
+  "AOT": {
+    "title": "Aerosol Optical Thickness",
+    "family": "atmosphere",
+    "unit": null,
+    "description": "Aerosol Optical Thickness is the degree to which aerosols in the atmosphere prevent the transmission of light by absorption or scattering."
+  },
+  "BAT-TOP": {
+    "title": "Bathymetry from nautical charts and single-beam transects",
+    "family": "bathymetry",
+    "unit": "m"
+  },
+  "BBA": {
+    "title": "Backscattering / Absorption Ratio",
+    "family": "water-quality",
+    "unit": null,
+    "description": "Ratio of total backscattering and total absorption"
+  },
+  "BMC": {
+    "title": "Biomass change",
+    "family": "land",
+    "unit": null
+  },
+  "CDM": {
+    "title": "CDOM, Yellow substance",
+    "family": "water-quality",
+    "unit": "1/m",
+    "description": "CDM comprises all colored dissolved organic matter (CDOM) which influences the water color. It is measured in terms of absorption at a specific reference wavelength, defined at 440nm."
+  },
+  "CHA": {
+    "title": "Chlorophyll-a",
+    "family": "water-quality",
+    "unit": "µg/l",
+    "description": "Chlorophyll-a is based on the derived information of the pigment-specific in-water absorption, in-water turbidity and spectral characteristics of each water body."
+  },
+  "CHC": {
+    "title": "Cyano-Chlorophyll",
+    "family": "water-quality",
+    "unit": "µg/l",
+    "description": "Cyano-Chlorophyll is based on the derived information of the pigment-specific in-water absorption of Phycoerythrin, a pigment commonly found in cyanobacteria, in-water turbidity and spectral characteristics of each water body."
+  },
+  "CHL": {
+    "title": "Total Chlorophyll",
+    "family": "water-quality",
+    "unit": "µg/l",
+    "description": "Total Chlorophyll is based on the derived information of in-water organic absorption, in-water turbidity and spectral characteristics of each water body."
+  },
+  "DEM": {
+    "title": "Digital Elevation Model",
+    "family": "topography",
+    "unit": "m"
+  },
+  "DIV": {
+    "title": "Organic Absorption / Turbidity",
+    "family": "water-quality",
+    "unit": null,
+    "description": "DIV is the ratio between total absorption and total scattering of water constituents at 550nm. Zones of increased DIV can therefore be interpreted as zones of increased organic production or increased dissolved organic and nutrient inflows, independent on absolute concentrations."
+  },
+  "DSM": {
+    "title": "Digital surface model",
+    "family": "topography",
+    "unit": "m"
+  },
+  "DSM-MSB": {
+    "title": "Merged digital surface model and multi-source bathymetry",
+    "family": "topography",
+    "unit": "m"
+  },
+  "DSM-SDB": {
+    "title": "Merged digital surface model and satellite-derived bathymetry",
+    "family": "topography",
+    "unit": "m"
+  },
+  "DTM": {
+    "title": "Digital terrain model",
+    "family": "topography",
+    "unit": "m"
+  },
+  "DTM-SDB": {
+    "title": "Topo-bathymetric terrain model",
+    "family": "topography",
+    "unit": "m"
+  },
+  "EVA": {
+    "title": "Evaporation Rate",
+    "family": "water-quality",
+    "unit": "mm/h",
+    "description": "Evaporation Rate is calculated using Sea Surface Temperature (SST) and additional weather data, downloadable as a 3-hourly global dataset with a grid size of 0.25 degree (http://hydro1.gesdisc.eosdis.nasa.gov/data/GLDAS/GLDAS_NOAH025_3H.2.1)."
+  },
+  "EVI": {
+    "title": "Enhanced Vegetation Index",
+    "family": "land",
+    "unit": null,
+    "description": "The EVI is a vegetation index with improved sensitivity in high biomass regions. It was once developed mainly for use with MODIS and is calculated from atmospherically corrected surface reflectances following the formula: EVI = G * ((NIR -RED) / (NIR + C1 * RED -C2 * BLUE +L)) with the coefficients set to: \nG = 2.5 \nC1 = 6 \nC2 = 7.5 \nL = 1"
+  },
+  "FAI": {
+    "title": "Floating Algae Index",
+    "family": "water-quality",
+    "unit": null,
+    "description": "The FAI is an index sensitive to floating algae, such as Sargassum, using the red, red-edge, near-infrared and short-wave infrared bands (depending on available channels of the respective sensor)."
+  },
+  "GND": {
+    "title": "Green Normalized Difference Vegetation Index",
+    "family": "land",
+    "unit": null,
+    "description": "NDVI is a very basic vegetation index, calculated from atmospherically corrected surface reflectances. The GNDVI follows the exact same principle, but uses the green band instead of the red band, following the formula: GNDVI = (NIR - GREEN) / (NIR + GREEN)."
+  },
+  "GSA": {
+    "title": "Green Soil-adjusted Vegetation Index",
+    "family": "land",
+    "unit": null,
+    "description": "The SAVI is a basic vegetation index that takes the influence of different soil colors into account, compared to, e.g., NDVI. It was originally established by Huete (1988) and is calculated from atmospherically corrected surface reflectances. The GSAVI follows the exact same principle, but uses the green band instead of the red band, following the formula: GSAVI = (NIR - GREEN) / (NIR + GREEN + L) * (1 + L) \nL is the canopy background adjustment factor and is commonly used with a value of 0.5."
+  },
+  "HAB": {
+    "title": "Harmful Algae Bloom Indicator",
+    "family": "water-quality",
+    "unit": null,
+    "classified": true,
+    "description": "The algorithm detects areas likely affected by harmful algae blooms formed by cyanobacteria containing phycocyanin pigments by analyzing spectral trends in the green-red wavelength bands as a proxy. The classification reads as follows: \n1: no HAB (probability 0) \n2: HAB unlikely (probability 0.2) \n3: HAB likely (probability 0.5) \n4: HAB very likely (probabilty greater 0.5)."
+  },
+  "IMG": {
+    "title": "Satellite image data",
+    "family": "imagery",
+    "unit": null
+  },
+  "KDB": {
+    "title": "Diffuse Attenuation Coefficient (490nm)",
+    "family": "water-quality",
+    "unit": "1/m",
+    "description": "KDB is the diffuse attenuation coefficient for the 'blue' channel (around 490nm) and is also referred to as Kd490. The exact wavelength can differ slightly between sensors, depending on their respective spectral properties."
+  },
+  "KDC": {
+    "title": "Diffuse Attenuation Coefficient",
+    "family": "water-quality",
+    "unit": "1/m",
+    "description": "KDC is the diffuse attenuation coefficient and is given for each sensor channel of the visible spectrum. The distinct wavelengths of these channels slightly differ between the sensors."
+  },
+  "KDP": {
+    "title": "Diffuse Attenuation Coefficient (of photosynthetically available radiation)",
+    "family": "water-quality",
+    "unit": "1/m",
+    "description": "KDP is the diffuse attenuation coefficient of the photosynthetically available radiation (usually between 490 and 670nm)."
+  },
+  "LCC": {
+    "title": "Land cover classification",
+    "family": "land",
+    "unit": null,
+    "classified": true
+  },
+  "LRF": {
+    "title": "Land Reflectance",
+    "family": "reflectance",
+    "unit": null,
+    "description": "Surface reflectance (after atmospheric correction) over non-water surfaces (typically land)."
+  },
+  "LULC": {
+    "title": "Land use and land cover classification",
+    "family": "land",
+    "unit": null,
+    "classified": true
+  },
+  "LWR": {
+    "title": "Land Water Reflectance",
+    "family": "reflectance",
+    "unit": null,
+    "description": "Surface reflectance after atmospheric correction. LWR is a combination of the land and water reflectance products (LRF and RRA)."
+  },
+  "MANGROVES": {
+    "title": "Mangrove classification",
+    "family": "land",
+    "unit": null,
+    "classified": true
+  },
+  "MLO": {
+    "title": "Machine Learning Output",
+    "family": "other",
+    "unit": null,
+    "description": "Output from EOMAP's Machine Learning Algorithm. The actual content and its units depend on the input data."
+  },
+  "MSB": {
+    "title": "Multi-source bathymetry",
+    "family": "bathymetry",
+    "unit": "m"
+  },
+  "NDV": {
+    "title": "Normalized Difference Vegetation Index",
+    "family": "land",
+    "unit": null,
+    "description": "NDVI is a very basic vegetation index, calculated from atmospherically corrected surface reflectances following the formula: NDVI = (NIR - RED) / (NIR + RED)."
+  },
+  "NDW": {
+    "title": "Normalized Difference Water Index",
+    "family": "land",
+    "unit": null,
+    "description": "NDWI as calculated by EOMAP refers to water content in leaves and is calculated from atmospherically corrected surface reflectances following the formula: NDWI = (NIR - SWIR) / (NIR + SWIR)."
+  },
+  "NRF": {
+    "title": "Normed Remote Sensing Reflectance",
+    "family": "reflectance",
+    "unit": null,
+    "description": "Remote sensing reflectance (pi * RRS[0, 0]), normed to a sun angle of 0 degrees (nadir)."
+  },
+  "NRG": {
+    "title": "False Color Quicklook image",
+    "family": "imagery",
+    "unit": null,
+    "description": "Composite image, representing the satellite image either in false color mode depending on the used sensor. In most cases, the spectral band from the near-infrared and visible spectrum are used (red and green)."
+  },
+  "ORTHO": {
+    "title": "Orthorectified image data",
+    "family": "imagery",
+    "unit": null
+  },
+  "OTC": {
+    "title": "OLCI Terrestrial Chlorophyll Index",
+    "family": "land",
+    "unit": null,
+    "description": "OTCI is a chlorophyll index specifically designed for Sentinel-3. It is calculated from atmospherically corrected surface reflectance following the formula: OTCI = (NIR -REDEDGE) / (REDEDGE - RED); in case of Sentinel-3, the bands are: \nRED = Band 10 (681nm) \nREDEDGE = Band 11 (709nm) \nNIR = Band 12 (753nm)."
+  },
+  "OWD": {
+    "title": "Optical Water Depth",
+    "family": "bathymetry",
+    "unit": "m",
+    "description": "Optical water depth or bathymetry, corrected for lowest astronomical tide (LAT). Negative values: water depth. Positive values: intertidal zone (elevation above LAT)."
+  },
+  "QUA": {
+    "title": "Quality Assessment",
+    "family": "quality",
+    "unit": null,
+    "description": "Quality assessment per pixel, based on illumination, geometry, atmospheric properties, spatial noise, among others. The first channel always holds the combined total quality, while all other channels hold more detailed information for each specific quality check."
+  },
+  "QUC": {
+    "title": "EOMAP Quality Coding",
+    "family": "quality",
+    "unit": null,
+    "classified": true,
+    "description": "EOMAP Quality Coding gives information about quality risks and specific quality flags for each pixel."
+  },
+  "QUT": {
+    "title": "Total Quality",
+    "family": "quality",
+    "unit": null,
+    "description": "Quality estimation expressed in greyvalues in 8 bit, ranging from 1 (lowest quality) to 100 (highest quality). 0 represents land, clouds or flagged pixels."
+  },
+  "RGB": {
+    "title": "RGB composite image",
+    "family": "imagery",
+    "unit": null,
+    "description": "The Composite image represents the satellite image either in true or false color mode depending on the used sensor. In most cases, the spectral bands from the visible spectrum are used (red, green, and blue)."
+  },
+  "RRA": {
+    "title": "Remote Sensing Reflectance (above-surface, Nadir)",
+    "family": "reflectance",
+    "unit": "1/sr",
+    "description": "Above-surface remote sensing reflectance [RRA (0+)], defined as Lu/Ed, with nadir view angle."
+  },
+  "RRS": {
+    "title": "Remote Sensing Reflectance (sub-surface)",
+    "family": "reflectance",
+    "unit": "1/sr",
+    "description": "Sub-surface remote sensing reflectance [RRS (0-)], defined as Lu/Ed, with nadir view angle."
+  },
+  "RRW": {
+    "title": "Remote Sensing Reflectance (above-surface, WISP)",
+    "family": "reflectance",
+    "unit": "1/sr",
+    "description": "Above-surface remote sensing reflectance [RRW (0+)], defined as Lu/Ed, with view angle according to WISP configuration."
+  },
+  "SAV": {
+    "title": "Soil-adjusted Vegetation Index",
+    "family": "land",
+    "unit": null,
+    "description": "The SAVI is a basic vegetation index that takes the influence of different soil colors into account, compared to, e.g., NDVI. It was originally established by Huete (1988) and is calculated from atmospherically corrected surface reflectances, following the formula: SAVI = (1 + L) * (NIR - RED) / (NIR + RED + L). L is the canopy background adjustment factor and is commonly used with a value of 0.5."
+  },
+  "SCI": {
+    "title": "Scientific RRSAB",
+    "family": "reflectance",
+    "unit": null,
+    "description": "Scientific image that contains different RRSAB spectra as well as atmospheric and in-water parameters."
+  },
+  "SDB": {
+    "title": "Satellite-derived bathymetry",
+    "family": "bathymetry",
+    "unit": "m",
+    "description": "Water depth derived from optical satellite image data with EOMAP's Modular Inversion System (MIP), a physics-based method that separates the light reflected by the sea floor from atmosphere, water surface and water column. Negative values are depths below the vertical datum of the asset."
+  },
+  "SDD": {
+    "title": "Secchi Disk Depth",
+    "family": "water-quality",
+    "unit": "m",
+    "description": "Secchi Disk Depth or transparency indicates the clarity of the water column. The related measure of Secchi Depth (measured with a Secchi Disk) is a common parameter in water quality analysis."
+  },
+  "SEM": {
+    "title": "Seamless Elevation Model",
+    "family": "topography",
+    "unit": "m",
+    "description": "Elevation model that seamlessly connects land elevation and water depth (bathymetry)."
+  },
+  "SFC": {
+    "title": "Seafloor classification",
+    "family": "seafloor",
+    "unit": null,
+    "classified": true
+  },
+  "SFR": {
+    "title": "Seafloor reflectance",
+    "family": "seafloor",
+    "unit": null
+  },
+  "SIA": {
+    "title": "Sum of Inorganic Absorbers",
+    "family": "water-quality",
+    "unit": "1/m",
+    "description": "The sum of inorganic absorption is retrieved from the absorption of light by particulate and dissolved inorganic matter at a specific reference wavelength, defined at 440nm."
+  },
+  "SLB": {
+    "title": "Satellite lidar bathymetry",
+    "family": "bathymetry",
+    "unit": "m"
+  },
+  "SLC": {
+    "title": "Shoreline change",
+    "family": "shoreline",
+    "unit": null
+  },
+  "SLM": {
+    "title": "Shoreline",
+    "family": "shoreline",
+    "unit": null
+  },
+  "SLP": {
+    "title": "Aerosol Slope Modifier",
+    "family": "atmosphere",
+    "unit": null,
+    "description": "Atmospheric absorption from aerosols is wavelength-dependent. The change of this dependency in terms of deviation from EOMAPs standard aerosol model is expressed as the aerosol slope modifier."
+  },
+  "SLT": {
+    "title": "Shoreline type",
+    "family": "shoreline",
+    "unit": null,
+    "classified": true
+  },
+  "SND": {
+    "title": "Snow Depth",
+    "family": "snow",
+    "unit": "m",
+    "description": "Daily snow depth."
+  },
+  "SOA": {
+    "title": "Sum of Organic Absorbers",
+    "family": "water-quality",
+    "unit": "1/m",
+    "description": "The sum of organic absorption is retrieved from the absorption of light by particulate and dissolved organic matter at a specific reference wavelength, defined at 440nm."
+  },
+  "SSR": {
+    "title": "Subsurface reflectance",
+    "family": "reflectance",
+    "unit": null,
+    "description": "Sub-surface irradiance reflectance [SSR (0-)], defined as Eu/Ed (unitless)."
+  },
+  "SST": {
+    "title": "Sea Surface Temperature",
+    "family": "water-quality",
+    "unit": "°C",
+    "description": "Sea/Water Surface Temperature is calculated from thermal infrared channels. SST from Landsat is directly taken from Level-2 data, provided by USGS."
+  },
+  "SWE": {
+    "title": "Snow Water Equivalent",
+    "family": "snow",
+    "unit": "mm",
+    "description": "Daily snow water equivalent."
+  },
+  "TSC": {
+    "title": "Trophic State Index",
+    "family": "water-quality",
+    "unit": null,
+    "classified": true,
+    "description": "Trophic State Index range from 0 to 100 \n0-39: oligotrophic \n40-59: mesotrophic \n60-79: eutrophic \n80+: hypereutrophic"
+  },
+  "TSM": {
+    "title": "Total suspended matter",
+    "family": "water-quality",
+    "unit": "mg/l",
+    "description": "TSM is essentially related to the total scattering of particles in the water column and determined by the backward scattering of light in the visible region."
+  },
+  "TUR": {
+    "title": "Turbidity",
+    "family": "water-quality",
+    "unit": "NTU",
+    "description": "Turbidity is derived from the scattering caused by suspended particles in water and determined by the backward scattering of light between 450 to 800nm."
+  },
+  "VUC": {
+    "title": "Vertical uncertainty",
+    "family": "bathymetry",
+    "unit": "m"
+  },
+  "WEX": {
+    "title": "Water Body Extent",
+    "family": "water-quality",
+    "unit": null,
+    "classified": true,
+    "description": "Water Body Extent product discriminates between land/clouds and water pixels based on typical reflectance features in visible and near/shortwave infrared region. \nland/clouds = 0 \nwater = 1"
+  },
+  "Z90": {
+    "title": "Signal Depth (z90)",
+    "family": "water-quality",
+    "unit": "m",
+    "description": "Z90 indicates the water depth from which 90% of the reflected light originates."
+  }
+}

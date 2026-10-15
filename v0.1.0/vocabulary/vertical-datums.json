@@ -1,0 +1,53 @@
+{
+  "AHD": {
+    "title": "Australian Height Datum"
+  },
+  "CD": {
+    "title": "Chart Datum"
+  },
+  "DHHN2016": {
+    "title": "Deutsches Haupthöhennetz 2016"
+  },
+  "EGM1996": {
+    "title": "Earth Gravitational Model 1996",
+    "aliases": [
+      "EGM96"
+    ]
+  },
+  "EGM2008": {
+    "title": "Earth Gravitational Model 2008",
+    "aliases": [
+      "EGM08"
+    ]
+  },
+  "HAT": {
+    "title": "Highest Astronomical Tide"
+  },
+  "IGLD85": {
+    "title": "International Great Lakes Datum 1985"
+  },
+  "LAT": {
+    "title": "Lowest Astronomical Tide"
+  },
+  "MLLW": {
+    "title": "Mean Lower Low Water"
+  },
+  "MLWS": {
+    "title": "Mean Low Water Springs"
+  },
+  "MSL": {
+    "title": "Mean Sea Level"
+  },
+  "NADD": {
+    "title": "National Abu Dhabi Datum"
+  },
+  "NAVD88": {
+    "title": "North American Vertical Datum 1988"
+  },
+  "RH2000": {
+    "title": "Rikets höjdsystem 2000"
+  },
+  "SATREC": {
+    "title": "Water level at time of satellite recording"
+  }
+}
