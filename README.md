@@ -66,8 +66,8 @@ Levels are in metres above chart datum.
 ## Vocabularies
 
 The vocabularies define the allowed codes. Each entry has a title and optional `aliases`: other spellings found in
-EOMAP systems (file names, processing chains, legacy archives). **Matching ignores case and all characters except
-letters and digits**, so `WorldView-Legion`, `WorldView Legion` and `WORLDVIEWLEGION` are the same. Producers should
+EOMAP systems (file names, processing chains, legacy archives). **Matching ignores case and all characters except ASCII
+letters (a–z) and digits**, so `WorldView-Legion`, `WorldView Legion` and `WORLDVIEWLEGION` are the same. Producers should
 write the id (the key), not an alias. Ids and aliases are unique across a vocabulary (checked in CI).
 
 Codes that are not (yet) in a vocabulary are still valid values; consumers should flag them for review
